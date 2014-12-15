@@ -1,0 +1,3 @@
+[submodule "helloworld"]
+	path = helloworld
+	url = https://github.com/davidfowl/HelloWorldVNext.git
