@@ -14,7 +14,8 @@
 # Docker
 
 - boot2docker start
-- docker build -t aspnet .
+- docker build -t aspnet ./aspnet
+- docker build -t helloworldapp .
 - docker run -i -p 5000:5000 -t aspnet
 - docker run -i -p 5000:5000 -v /Users/nikolaia/development/docker-aspnet5/helloworld/:/app/ -t aspnet
 - http://192.168.59.103:5000
