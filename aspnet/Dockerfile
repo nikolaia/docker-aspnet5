@@ -1,4 +1,4 @@
-FROM mono:3.10
+FROM mono:latest
 
 ENV KRE_USER_HOME /opt/kre
 
