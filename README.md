@@ -1,4 +1,5 @@
-# workshop: aspnet5 on docker
+# ASP.NET5 on Mac OS X and Docker
+## Workshop
 
 # General
 
@@ -13,8 +14,10 @@
 
 # Docker
 
+- brew install boot2docker (go,docker, boot2docker)
+- boot2docker init (Creates the Host VM)
 - boot2docker start
-- docker build -t aspnet ./aspnet
+- docker (--tls) build -t aspnet ./aspnet
 - docker build -t helloworldapp .
 - docker run -i -p 5000:5000 -t aspnet
 - docker run -i -p 5000:5000 -v /Users/nikolaia/development/docker-aspnet5/helloworld/:/app/ -t aspnet
