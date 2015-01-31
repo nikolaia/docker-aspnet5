@@ -1,0 +1,21 @@
+module.exports = function(grunt) {
+
+  grunt.loadNpmTasks('grunt-docker');
+
+  grunt.initConfig({
+    docker: {
+      options: {
+        // These options are applied to all tasks
+      },
+      app: {
+        // Specify `src` and `dest` directly on the task object
+        src: ['path/to/source/files/*.{coffee,js}'],
+        dest: 'where/you/want/your/generated/doc/files',
+        options: {
+          // ...
+        }
+      }
+    }
+  });
+
+};

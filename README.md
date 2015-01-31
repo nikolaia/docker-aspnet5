@@ -1,5 +1,5 @@
 # ASP.NET5 on Mac OS X and Docker
-## Workshop
+## Playground
 
 - brew update
 
@@ -21,20 +21,17 @@
 - Open port on boot2docker host ```VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port5000,tcp,,5000,,5000";```
 - boot2docker start (Powers on the VM and sets env variables for the docker client/cli - ip, certificates etc.) ($(boot2docker shellinit))
 - docker (--tls) build -t aspnet ./aspnet
-- docker build -t helloworldapp .
-- docker run -i -p 5000:5000 -t helloworldapp
-- docker run -i -p 5000:5000 -v /Users/nikolaia/development/docker-aspnet5/helloworld/:/app/ -t helloworldapp
+- docker build -t hellomvc .
+- docker run -i -p 5000:5000 -t hellomvc
+- docker run -i -p 5000:5000 -v /Users/nikolaia/Development/docker-aspnet5/Home/samples/HelloMvc/:/app/ -t hellomvc
 - http://<boot2docker host ip>:5000
 
-# Grunt
 
-How can we integrate grunt?
+# Advanced:
 
-Run KPM restore inside of the container:
-```grunt restore```
+Command: https://github.com/henriksen/kmon/
+Gulp: https://github.com/tugberkugurlu/gulp-aspnet-k
 
-Build the aspnet5 project inside the container:
-```grunt build```
 
-Run grunt build when source files change:
-```grunt watch```
+http://nodemon.io/
+https://github.com/timfpark/coreos-azure

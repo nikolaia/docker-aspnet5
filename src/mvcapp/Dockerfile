@@ -1,15 +1,14 @@
 FROM aspnet
 
 # copy the contents of the local directory to /app/ on the image
-ADD helloworld /app/
+ADD src /app/
 # set the working directory for subsequent commands
 WORKDIR /app
 # fetch the NuGet dependencies for our application
 RUN kpm restore
 # set the working directory for subsequent commands
-WORKDIR /app/src/hellomvc
-# expose TCP port 5000 from container
-EXPOSE 5000
+# expose TCP port 5001 from container
+EXPOSE 5001
 # Configure the image as an executable
 # When the image starts it will execute the “k web” command
 # effectively starting our web application
