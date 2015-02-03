@@ -4,9 +4,9 @@ ENV KRE_USER_HOME /opt/kre
 
 RUN apt-get -qq update && apt-get -qqy install unzip
 
-RUN curl -sSL https://raw.githubusercontent.com/aspnet/Home/master/kvminstall.sh | sh
+RUN curl -sSL https://raw.githubusercontent.com/aspnet/Home/v1.0.0-beta2/kvminstall.sh | sh
 RUN bash -c "source $KRE_USER_HOME/kvm/kvm.sh \
-	&& kvm install latest -a default \
+	&& kvm install 1.0.0-beta2 -a default \
 	&& kvm alias default | xargs -i ln -s $KRE_USER_HOME/packages/{} $KRE_USER_HOME/packages/default"
 
 # Install libuv for Kestrel from source code (binary is not in wheezy and one in jessie is still too old)
